@@ -98,7 +98,7 @@ $site_refer = $_SERVER['HTTP_REFERER'];
         $country = $details->country;
     }
     // Отправка данных.
- $token = "1583804831:AAGxLf56tthjYVbzS9tWQHpHDDL49TPJ7o0"; //Токен бота с @BotFather
- $chat_id = "1033324188";// Ваш chat id
+ $token = ""; //Токен бота с @BotFather
+ $chat_id = "";// Ваш chat id
  $txt = urlencode("Внимание!\nIP:{$ip}\nПровайдер: $ipapi->isp ($ipapi->org)\nСтрана:{$country}\nРегион:$ipapi->regionName ($ipapi->region)\nГород:$ipapi->city\nОС:{$user_os}\nБраузер:{$user_browser}\nЮсер Агент:{$user_agent}");
  $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
